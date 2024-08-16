@@ -1,0 +1,30 @@
+<!-- image_classification_report.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Classification Report</title>
+</head>
+<body>
+    <h1>Image Classification Report</h1>
+
+
+
+    <h2>Prediction Details</h2>
+    <p><strong>Prediction:</strong> {{ prediction }}</p>
+    <p><strong>Confidence:</strong> {{ confidences }}</p>
+
+
+    <h2>Original Image</h2>
+    <img src="data:image/jpeg;base64,{{ original_image }}" alt="Original Image">
+
+
+    <h2>Error Level Analysis (ELA)</h2>
+    <p><strong>ELA Threshold:</strong> {{ ela_threshold }}</p>
+    <img src="data:image/jpeg;base64,{{ ela_img }}" alt="ELA Image">
+
+</body>
+</html>

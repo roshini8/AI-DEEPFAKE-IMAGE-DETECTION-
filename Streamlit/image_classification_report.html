@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Forensics Report</title>
+    <style>
+        h2 {
+            text-align: center;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .prediction {
+            color: red;
+            font-size: larger;
+            font-weight: bold;
+        }
+
+        .section-heading {
+            font-weight: bold;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h2>Image Forensics Report</h2>
+
+    <h3 class="section-heading">Prediction:</h3>
+    <ul>
+        {{prediction}}
+    </ul>
+
+    <div>
+        <h3 class="section-heading">Confidences:</h3>
+        <ul>
+            <li>Real: {{ "%.4f"|format(confidences.real) }}</li>
+            <li>Fake: {{ "%.4f"|format(confidences.fake) }}</li>
+        </ul>
+    </div>
+    <br />
+    <div class="image-container">
+        <div>
+            <h3 class="section-heading">Uploaded Image:</h3>
+            <img src="data:image/jpg;base64,{{uploaded_file}}" alt="uploaded_file" />
+        </div>
+        <div>
+            <h3 class="section-heading">Face with Explainability:</h3>
+            <img src="data:image/jpg;base64,{{face_with_mask}}" alt="face_with_mask" />
+        </div>
+    </div>
+</body>
+</html>
