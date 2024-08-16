@@ -1,7 +1,3 @@
-It looks like you've shared a link to your GitHub repository. Here's how you can tailor the README template I provided earlier specifically for your project.
-
----
-
 # AI Deepfake Image Detection
 
 ## Table of Contents
